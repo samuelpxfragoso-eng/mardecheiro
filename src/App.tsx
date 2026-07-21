@@ -124,6 +124,7 @@ import {
   GOOGLE_REVIEWS_LINK,
   INSTAGRAM_LINK
 } from './constants';
+import LaundrySimulator from './components/LaundrySimulator';
 
 // --- Utility Components ---
 
@@ -511,7 +512,7 @@ const Plans = () => {
       icon: <Droplets size={44} className="text-[#2d3a82]" />,
       buttonText: "Agendar Lavagem",
       variant: "success" as const,
-      promo: "Terça-feira: R$ 15,90"
+      promo: "Terça: R$ 15,90 | Madrugada: R$ 16,90"
     },
     {
       title: "Secagem Avulsa",
@@ -522,13 +523,13 @@ const Plans = () => {
       icon: <Wind size={44} className="text-[#2d3a82]" />,
       buttonText: "Agendar Secagem",
       variant: "success" as const,
-      promo: "Terça-feira: R$ 15,90"
+      promo: "Terça: R$ 15,90 | Madrugada: R$ 16,90"
     },
     {
       title: "Plano Ouro - 10 ciclos",
       description: "Ideal para Airbnb e Salões. Economia e praticidade para seu negócio.",
-      price: "149",
-      cents: "99",
+      price: "169",
+      cents: "00",
       unit: "pacote",
       icon: <Medal size={44} className="text-[#2d3a82]" />,
       buttonText: "Saber Mais",
@@ -1104,6 +1105,7 @@ export default function App() {
     <div className="antialiased overflow-x-hidden">
       <Header />
       <Hero />
+      <LaundrySimulator />
       <Structure />
       <PremiumService />
       <GoogleReviewsSection />
